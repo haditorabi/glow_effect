@@ -4,8 +4,8 @@ uniform float time;
 uniform float a;
 uniform float slide;
 uniform vec2 resolution;
-uniform vec3 particles[200];
-uniform vec3 colors[200];
+uniform vec3 particles[100];
+uniform vec3 colors[100];
 
 void main() {
   vec2 st = gl_FragCoord.xy / resolution.xy;
@@ -22,7 +22,7 @@ void main() {
   
   vec3 col = vec3(0.0);
   
-  for(int i = 0; i < 200; i++) {
+  for(int i = 0; i < 100; i++) {
     vec3 particle = particles[i];
     vec2 pos = particle.xy;
     float m = particle.z * 1.1;
